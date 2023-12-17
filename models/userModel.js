@@ -5,7 +5,6 @@ const usersmodel = db.define(
     "users",
     {
         name:{type:sequelize.STRING},
-        country:{type:sequelize.STRING},
         email:{type:sequelize.STRING},
         password:{type:sequelize.STRING},
     }

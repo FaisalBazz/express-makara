@@ -25,7 +25,7 @@ const login = async (req, res) => {
                 "message": "success",
                 "loginResult": {
                     "userId": "id",
-                    "name": "name",
+                    "email": email,
                     "token": token
                 }
             });
@@ -39,7 +39,6 @@ const login = async (req, res) => {
 const register = async (req, res) => {
     try {
         const name = req.body.name
-        const country = req.body.country
         const email = req.body.email
         const password = req.body.password
 
@@ -53,7 +52,6 @@ const register = async (req, res) => {
 
         const users = new userModel({
             name : name,
-            country: country,
             email : email,
             password : hashedPassword,
         })
