@@ -1,7 +1,7 @@
 {
     "username":"root",
-    "password":"",
+    "password":"1111",
     "database":"express_makara",
-    "host":"localhost",
+    "host":"34.128.106.232",
     "dialect":"mysql"
 }

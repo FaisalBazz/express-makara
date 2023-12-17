@@ -5,7 +5,8 @@ const db = new sequelize(
     getConnect.database,
     getConnect.username,
     getConnect.password,{
-        dialect:getConnect.dialect
+        host: getConnect.host, 
+        dialect: getConnect.dialect
     }
 )
 
