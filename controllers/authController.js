@@ -13,10 +13,10 @@ const login = async (req, res) => {
             where : {email: email}
         })
 
-        if(!getData) res.status(400).send("Username tidak terdaftar");
+        if(!getData) res.status(400).send("Email tidak terdaftar");
         const resultLogin = bcrypt.compareSync(password, getData.password);
 
-        if(!resultLogin) res.status(400).send("Username/Password salah!");
+        if(!resultLogin) res.status(400).send("Email/Password salah!");
 
         // Token
         const token = jwt.sign({email: getData.email}, process.env.TOKEN_RAHASIA);
